@@ -5,6 +5,7 @@ const fib = (n) => {
   }
   return arr[n];
 };
+
 const res1 = fib(9);
 console.log(res1); //34
 
@@ -17,6 +18,5 @@ const fibb = (n) => {
 };
 
 console.log(fibb(9)); //34
-
 
 
