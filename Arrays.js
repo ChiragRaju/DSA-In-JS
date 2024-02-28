@@ -60,3 +60,31 @@ console.log(buySellStock([7, 6, 4, 3, 1]));
 // arr = [7,1,5,3,6,4];
 // min=7=>1
 // profit=0=>5-1=>4
+
+//largets element in an array
+
+function largestEle(num) {
+  let largest = num[0];
+  for (let i = 1; i < num.length; i++) {
+    if (largest < num[i]) {
+      largest = num[i];
+    }
+  }
+  return largest;
+}
+console.log(largestEle([2, 3, 9, 8, 6]));
+
+function secondLargest(num) {
+  let largest = num[0];
+  let secLargest = -1; //use -Infinity
+  for (let i = 0; i < num.length; i++) {
+    if (largest < num[i]) {
+      secLargest = largest;
+      largest = num[i];
+    } else if (secLargest < num[i] && num[i] < largest) {
+      secLargest = num[i];
+    }
+  }
+  return secLargest;
+}
+console.log("second largest: ", secondLargest([2, 3, 9, 8, 6]));
