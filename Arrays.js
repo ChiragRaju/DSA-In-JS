@@ -88,3 +88,24 @@ function secondLargest(num) {
   return secLargest;
 }
 console.log("second largest: ", secondLargest([2, 3, 9, 8, 6]));
+
+//square of sorted array
+//bruteforce approach
+
+const sortedArray = (nums) => {
+  let res = nums.map((x) => x * x);
+  let sorted = res.sort((a, b) => a - b);
+  return sorted;
+};
+
+console.log(sortedArray([-4, -1, 0, 3, 10]));
+
+// using forEach
+
+const sortArray = (n) => {
+  let squares = [];
+  n.forEach((x) => squares.push(x * x));
+  let result = squares.sort((a, b) => a - b);
+  return result;
+};
+console.log(sortArray([-4, -1, 0, 3, 10]));
